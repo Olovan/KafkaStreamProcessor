@@ -1,0 +1,2 @@
+docker-compose exec broker kafka-topics --create --topic Messages --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:2181
+docker-compose exec broker kafka-topics --create --topic Words --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:2181
