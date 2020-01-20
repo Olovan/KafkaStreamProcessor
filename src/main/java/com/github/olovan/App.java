@@ -7,10 +7,6 @@ import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
 
@@ -22,8 +18,7 @@ public class App
     {
         Properties props = createKafkaProperties();
         StreamsBuilder builder = new StreamsBuilder();
-        StreamProcessor processor = new StreamProcessor();
-        processor.createStream(builder);
+        StreamProcessor.createStream(builder);
         KafkaStreams streams = new KafkaStreams(builder.build(), props);
         streams.cleanUp();
         streams.start();

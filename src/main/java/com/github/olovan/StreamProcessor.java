@@ -9,7 +9,7 @@ import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.kstream.Produced;
 
 public class StreamProcessor {
-    public void createStream(StreamsBuilder streamsBuilder) {
+    public static void createStream(StreamsBuilder streamsBuilder) {
         KStream<String, String> messageStream = streamsBuilder.stream("Messages");
         KTable<String, Long> wordStream = messageStream
             .flatMapValues((v) -> Arrays.asList(v.split(" ")))
