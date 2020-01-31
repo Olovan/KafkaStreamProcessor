@@ -5,4 +5,4 @@ if [ $# == 0 ]; then
     exit 1
 fi
 
-docker exec broker bash -c "echo \"$1\" | kafka-console-producer --broker-list localhost:9092 --topic Messages --request-required-acks 1"
+docker exec broker schema-registry -c "echo \"$1\" | kafka-console-producer --broker-list localhost:9092 --topic Messages --request-required-acks 1"

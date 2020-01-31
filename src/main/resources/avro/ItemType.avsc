@@ -1,0 +1,4 @@
+[
+    { "namespace": "DataContract.Item", "type": "record", "name": "ItemTypeKey", "fields": [ { "name": "ID", "type": "int" } ] },
+    { "namespace": "DataContract.Item", "type": "record", "name": "ItemType", "fields": [ { "name": "ID", "type": "int" }, { "name": "Description", "type": "string" } ] }
+]

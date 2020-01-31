@@ -1,0 +1,44 @@
+[
+    {
+        "namespace": "DataContract.Item",
+        "type": "record",
+        "name": "FullItemKey",
+        "fields": [
+            {
+                "name": "ID",
+                "type": "int"
+            }
+        ]
+    },
+    {
+        "namespace": "DataContract.Item",
+        "type": "record",
+        "name": "FullItem",
+        "fields": [
+            {
+                "name": "ID",
+                "type": "int"
+            },
+            {
+                "name": "Name",
+                "type": "string"
+            },
+            {
+                "name": "TypeID",
+                "type": "int"
+            },
+            {
+                "name": "TypeDescription",
+                "type": "string"
+            },
+            {
+                "name": "DangerID",
+                "type": "int"
+            },
+            {
+                "name": "DangerDescription",
+                "type": "string"
+            }
+        ]
+    }
+]

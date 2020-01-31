@@ -1,5 +1,6 @@
 package com.github.olovan;
 
+import java.util.Collections;
 import java.util.Properties;
 
 import org.apache.kafka.common.serialization.Serdes;
@@ -18,6 +19,7 @@ public class App
     {
         Properties props = createKafkaProperties();
         StreamsBuilder builder = new StreamsBuilder();
+        StreamProcessor.configureSerdes(Collections.singletonMap("schema.registry.url", "http://localhost:8081"));
         StreamProcessor.createStream(builder);
         KafkaStreams streams = new KafkaStreams(builder.build(), props);
         streams.cleanUp();
